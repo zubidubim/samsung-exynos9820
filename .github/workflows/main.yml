@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "N970F" ]
+        model: [ "N970F,N975F" ]
 
     steps:
       - uses: actions/checkout@v2
@@ -38,6 +38,7 @@ jobs:
                        +force_dex_wqhd           \
                        +morosound                \
                        +boeffla_wl_blocker       \
+                       +dtb                      \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
